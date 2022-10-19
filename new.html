@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Display Property</title>
+    <style>
+        .container{
+            width: 400px;
+            margin: auto;
+            
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input id="age" value="" type="number">
+        <button onclick="clickfn()">Check</button>
+        <h1></h1>
+    </div>
+</body>
+</html>
+<script>
+    function clickfn(){
+         let x = document.getElementById("age").value 
+         x=+(x)
+        if(isPrime(x)){
+            alert(`${x} is a Prime Number`)
+        }
+        else{
+            alert(`${x} is not a Prime Number`)
+        }
+    }
+
+    function isPrime(num){
+        let count=0;
+        for(i=1;i<=num;i++){
+            if(num%i==0){
+                count++
+            }
+        }
+        return count==2;
+    }
+</script>
