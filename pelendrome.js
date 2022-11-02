@@ -14,9 +14,9 @@ function clickfn(){
 }
 
 function isPelendrome(str){
-    let bag = "";
+    let reverseString = "";
   for(i=str.length-1;i>=0;i--){
     bag+=str[i]
   }
-   return str==bag;
+   return str==reverseString;
 }
